@@ -106,7 +106,8 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+	padding-top:20px;
+	padding-bottom:20px;
   background-color: #3397DB;
   align-items: center;
 }
@@ -115,6 +116,7 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
+	padding:10px;
   margin: 0 20px;
 }
 .filter-options select {
@@ -272,4 +274,127 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Responsive system */
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.module {
+  padding: 20px;
+  background: #eee;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+  .grid {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
+
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: 20px 0 20px 20px;
+  [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+}
+
+body {
+	padding: 10px 50px 200px;
+  background: url(https://s.cdpn.io/3/dark_wall_@2X.png);
+  background-size: 300px 300px;
+}
+h1 {
+  color: white;
+  em {
+  	color: #666;
+    font-size: 16px;
+  }
 }
