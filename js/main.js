@@ -89,7 +89,7 @@ window.initMap = () => {
  * Update page and map for current restaurants.
  */
 updateRestaurants = () => {
-  /*navigator.serviceWorker.register('service-worker.js', {
+  navigator.serviceWorker.register('service-worker.js', {
       scope: './'
     })
     .then(navigator.serviceWorker.ready)
@@ -99,7 +99,6 @@ updateRestaurants = () => {
     .catch(function(error) {
       console.log('error when registering service worker', error, arguments);
     });
-*/
   const cSelect = document.getElementById('cuisines-select');
   const nSelect = document.getElementById('neighborhoods-select');
 
