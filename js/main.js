@@ -89,7 +89,7 @@ window.initMap = () => {
  * Update page and map for current restaurants.
  */
 updateRestaurants = () => {
-  navigator.serviceWorker.register('service-worker.js', {
+  /*navigator.serviceWorker.register('service-worker.js', {
       scope: './'
     })
     .then(navigator.serviceWorker.ready)
@@ -98,7 +98,7 @@ updateRestaurants = () => {
     })
     .catch(function(error) {
       console.log('error when registering service worker', error, arguments);
-    });
+    });*/
   const cSelect = document.getElementById('cuisines-select');
   const nSelect = document.getElementById('neighborhoods-select');
 
@@ -150,28 +150,35 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   li.className = 'col';
+  li.tabIndex = 0;
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = DBHelper.imageAltForRestaurant(restaurant);
+  image.tabIndex = 0;
   li.append(image);
+
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.tabIndex = 0;
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.tabIndex = 0;
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.tabIndex = 0;
   li.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+
   li.append(more);
 
   return li;
