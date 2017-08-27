@@ -89,7 +89,7 @@ window.initMap = () => {
  * Update page and map for current restaurants.
  */
 updateRestaurants = () => {
-  navigator.serviceWorker.register('js/sw/service-worker.js', {
+  /*navigator.serviceWorker.register('service-worker.js', {
       scope: './'
     })
     .then(navigator.serviceWorker.ready)
@@ -99,6 +99,7 @@ updateRestaurants = () => {
     .catch(function(error) {
       console.log('error when registering service worker', error, arguments);
     });
+*/
   const cSelect = document.getElementById('cuisines-select');
   const nSelect = document.getElementById('neighborhoods-select');
 
@@ -149,7 +150,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.className = 'col-12';
+  li.className = 'col';
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
